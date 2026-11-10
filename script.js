@@ -33,6 +33,7 @@ boton.addEventListener("click", () => {
 
   // Agregar la fila al INICIO de la tabla (lo más reciente arriba)
   tablaRegistros.prepend(fila);
+  actualizarColor();
 });
 
 // ----- Reto 1: restar y reiniciar -----
@@ -43,11 +44,18 @@ btnRestar.addEventListener("click", () => {
   if (likes > 0) {
     likes--;
     textoContador.textContent = likes;
+    actualizarColor();
   }
 });
 
 btnReiniciar.addEventListener("click", () => {
   likes = 0;
   textoContador.textContent = likes;
-  tablaRegistros.innerHTML = ""; // vacía la tabla
+  tablaRegistros.innerHTML = "";
+  actualizarColor();
 });
+
+// ----- Reto 2: cambiar color si supera 10 -----
+function actualizarColor() {
+  textoContador.style.color = likes > 10 ? "#e74c3c" : "#3b9be0";
+}
