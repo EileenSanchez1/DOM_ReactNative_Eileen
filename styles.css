@@ -34,3 +34,46 @@ h1 {
   color: #3b9be0;
   margin: 16px 0;
 }
+
+#btn-like {
+  background-color: #2ecc71;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(46, 204, 113, 0.4);
+  transition: transform 0.1s;
+}
+
+#btn-like:hover {
+  transform: translateY(-2px);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  border: 1px solid #e0e0e0;
+}
+
+th {
+  color: #7f8c8d;
+  font-size: 14px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+td {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
