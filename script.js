@@ -34,3 +34,20 @@ boton.addEventListener("click", () => {
   // Agregar la fila al INICIO de la tabla (lo más reciente arriba)
   tablaRegistros.prepend(fila);
 });
+
+// ----- Reto 1: restar y reiniciar -----
+const btnRestar = document.getElementById("btn-restar");
+const btnReiniciar = document.getElementById("btn-reiniciar");
+
+btnRestar.addEventListener("click", () => {
+  if (likes > 0) {
+    likes--;
+    textoContador.textContent = likes;
+  }
+});
+
+btnReiniciar.addEventListener("click", () => {
+  likes = 0;
+  textoContador.textContent = likes;
+  tablaRegistros.innerHTML = ""; // vacía la tabla
+});
